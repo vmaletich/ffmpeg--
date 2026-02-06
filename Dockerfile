@@ -1,7 +1,6 @@
-# FFmpeg image + Node
-FROM jrottenberg/ffmpeg:6.1-alpine
+FROM node:20-alpine
 
-RUN apk add --no-cache nodejs npm
+RUN apk add --no-cache ffmpeg
 
 WORKDIR /app
 COPY package.json package-lock.json* ./
